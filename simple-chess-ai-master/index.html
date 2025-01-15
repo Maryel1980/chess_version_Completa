@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="board" class="board"></div>
+<!-- pop up ganadores -->  
+<div id="modal" class="container_modal">
+        <div class="modal-content">
+            <div id="close" class="close">
+                <p>X</p>
+            </div>
+            <img src="img/aplauso.png" alt="">
+            <audio id="aplauso">
+                <source src="img/aplausoCorto.mp3" type="audio/mp3">
+                falla de audio
+            </audio>             
+            <h2>Ganaste!!</h2>
+        </div>            
+</div>
+
+<!-- pop up perdiste -->  
+<div id="modal_e" class="container_modal">
+    <div class="modal-content">
+        <div id="close_e" class="close">
+            <p>X</p>
+        </div>
+        <img src="img/perdiste.png" alt="">
+        <audio id="die">
+            <source src="img/bros_die.mp3" type="audio/mp3">
+            falla de audio
+        </audio>             
+        <h2>Fallaste!!</h2>
+    </div>            
+</div>
+
+<!-- pop up 2do intento -->  
+<div id="modal_intento" class="container_modal">
+    <div class="modal-content">
+        <div id="close_i" class="close">
+            <p>X</p>
+        </div>
+        <img src="img/perdiste.png" alt="">
+        <audio id="dieI">
+            <source src="img/bros_die.mp3" type="audio/mp3">
+            falla de audio
+        </audio>             
+        <h2>Intentalo de nuevo!!</h2>
+    </div>            
+</div>
+
+
+<div class="info">
+    Search depth:
+    <select id="search-depth"   >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+
+    <br>
+    <div id="grupo">
+        <span>Positions evaluated: <span id="position-count"></span></span>
+        <br>
+        <span>Time: <span id="time"></span></span>
+        <br>
+        <span>Positions/s: <span id="positions-per-s"></span> </span>
+        <br>
+        <br>
+        <div id="move-history" class="move-history">
+        </div>
+    </div>
+    
+    <br>
+    <div>
+        <button id="bpista">pista</button>
+        <button id="bReiniciar">Reintentar</button>
+    </div>
+    <div>
+        
+    </div>
+    
+</div>
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="lib/chessboardjs/js/chess.js"></script>
+<script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+<script src="script.js"></script>
+<script src="modal.js"></script>
+
+</body>
+</html>
